@@ -4,6 +4,7 @@ package org.example.keynoteservice.services.impl;
 import lombok.RequiredArgsConstructor;
 import org.example.keynoteservice.DTOs.KeynoteRequestDTO;
 import org.example.keynoteservice.entities.Keynote;
+import org.example.keynoteservice.mappers.KeynoteMapper;
 import org.example.keynoteservice.repositories.KeynoteRepository;
 import org.example.keynoteservice.services.KeynoteService;
 import org.springframework.stereotype.Service;
@@ -16,6 +17,7 @@ import java.util.Optional;
 public class KeynoteServiceImpl implements KeynoteService {
 
     private final KeynoteRepository keynoteRepository;
+    private final KeynoteMapper keynoteMapper;
 
     @Override
     public List<Keynote> getAllKeynotes() {
@@ -35,10 +37,6 @@ public class KeynoteServiceImpl implements KeynoteService {
         return keynoteRepository.save(keynote);
     }
 
-    @Override
-    public Keynote createKeynote(KeynoteRequestDTO keynote) {
-        KeynoteMapper mapper
-    }
 
     @Override
     public Optional<Keynote> updateKeynote(Long id, Keynote updated) {
