@@ -1,17 +1,15 @@
 package org.example.eventservice.DTOs;
 
-import lombok.*;
+import lombok.Data;
 
-import java.util.Date;
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
+
+@Data
 public class CreateReviewDTO {
 
-    private Date date;
     private String feedback;
+
+
     private Long stars;
+
     private Long conferenceId;
 }

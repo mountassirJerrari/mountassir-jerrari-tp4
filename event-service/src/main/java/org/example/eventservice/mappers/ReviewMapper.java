@@ -12,7 +12,6 @@ public interface ReviewMapper {
     @Mapping(target = "conference" , ignore = true)
     Review toReview(CreateReviewDTO crd);
     @Mapping(target = "conference" , ignore = true)
-
     Review toReview(ReviewRequestDTO crd);
 
 
