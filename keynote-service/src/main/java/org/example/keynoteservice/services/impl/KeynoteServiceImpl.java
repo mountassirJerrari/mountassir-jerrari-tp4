@@ -2,6 +2,7 @@ package org.example.keynoteservice.services.impl;
 
 
 import lombok.RequiredArgsConstructor;
+import org.example.keynoteservice.DTOs.KeynoteRequestDTO;
 import org.example.keynoteservice.entities.Keynote;
 import org.example.keynoteservice.repositories.KeynoteRepository;
 import org.example.keynoteservice.services.KeynoteService;
@@ -32,6 +33,11 @@ public class KeynoteServiceImpl implements KeynoteService {
             throw new IllegalArgumentException("Email already exists for another keynote");
         }
         return keynoteRepository.save(keynote);
+    }
+
+    @Override
+    public Keynote createKeynote(KeynoteRequestDTO keynote) {
+        KeynoteMapper mapper
     }
 
     @Override
